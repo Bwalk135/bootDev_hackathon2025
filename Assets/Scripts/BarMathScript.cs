@@ -18,6 +18,8 @@ public class BarMathScript : MonoBehaviour
     public GameObject homeController;
 
     public TextMeshProUGUI bathMathResultText;
+    [SerializeField] private string metricImperialText = " Lbs";
+    public FreedomUnitConverter freedomUnitConverterScript;
 
     public void barMathButton()
     {
@@ -131,7 +133,7 @@ public class BarMathScript : MonoBehaviour
     {
         if (alreadyAdded)
         {
-            bathMathResultText.text = "Bar Math Result: " + barMathUpdated;
+            bathMathResultText.text = "Bar Math Result: " + barMathUpdated + metricImperialText;
         }
         else
         {
@@ -144,7 +146,7 @@ public class BarMathScript : MonoBehaviour
             {
                 barMathUpdated -= baseBarWeight;
             }
-            bathMathResultText.text = "Bar Math Result: " + barMathUpdated;
+            bathMathResultText.text = "Bar Math Result: " + barMathUpdated + metricImperialText;
         }
     }
     void maintainBarWeight()
@@ -152,6 +154,20 @@ public class BarMathScript : MonoBehaviour
         if (barMathUpdated <= baseBarWeight)
         {
             barMathUpdated = baseBarWeight;
+        }
+    }
+
+    void weightConversion()
+    {
+        if (!freedomUnitConverterScript.isMetric)
+        {
+            metricImperialText = " Kg";
+            barMathUpdated *= 0.4536f;
+        }
+        if (freedomUnitConverterScript.isMetric)
+        {
+            metricImperialText = " Lbs";
+            //barMathUpdated *= 0.4536f;
         }
     }
 }
