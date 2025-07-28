@@ -402,6 +402,8 @@ MonoBehaviour:
   isAdding: 0
   barMathHolder: {fileID: 1132605843}
   homeController: {fileID: 890844758}
+  skelly: {fileID: 206103743}
+  animatorSkelly: {fileID: 206103747}
   bathMathResultText: {fileID: 653859742}
   metricImperialText: 
   freedomUnitConverterScript: {fileID: 1832661425}
@@ -618,8 +620,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206103743}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.72677696, y: 3.19, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.22, y: 3.1899414, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1076,7 +1078,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 518251103}
   m_Father: {fileID: 1132605844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1130,7 +1133,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 193673331}
         m_TargetAssemblyTypeName: BarMathScript, Assembly-CSharp
-        m_MethodName: sub25
+        m_MethodName: sub35
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1786,12 +1789,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1132605844}
+  m_Father: {fileID: 427202304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1208, y: -947}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518251104
 MonoBehaviour:
@@ -3911,7 +3914,6 @@ Transform:
   - {fileID: 1003823742}
   - {fileID: 1996176541}
   - {fileID: 427202304}
-  - {fileID: 518251103}
   - {fileID: 1694836992}
   - {fileID: 1651690609}
   - {fileID: 1501442559}
@@ -8094,8 +8096,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 206103745}
   - {fileID: 1232033941}
   - {fileID: 1569566273}
   - {fileID: 1579396857}
-  - {fileID: 206103745}
   - {fileID: 1616599070}

@@ -16,20 +16,29 @@ public class BarMathScript : MonoBehaviour
 
     public GameObject barMathHolder;
     public GameObject homeController;
+    public GameObject skelly;
+    public Animator animatorSkelly;
 
     public TextMeshProUGUI bathMathResultText;
     [SerializeField] private string metricImperialText = " Lbs";
     public FreedomUnitConverter freedomUnitConverterScript;
 
+    private void Start()
+    {
+        //animatorSkelly = gameObject.GetComponent<Animator>();
+    }
+
     public void barMathButton()
     {
         homeController.SetActive(false);
+        animatorSkelly.SetBool("isHome", false);
         barMathHolder.SetActive(true);
     }
 
     public void backButton()
     {
         homeController.SetActive(true);
+       animatorSkelly.SetBool("isHome", true);
         barMathHolder.SetActive(false);
     }
 
